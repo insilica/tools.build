@@ -9,7 +9,11 @@
   org.slf4j/slf4j-nop {:mvn/version "1.7.32"}}
 
  :aliases
- {;; Run all tests
+ {:build {:deps {io.github.seancorfield/build-clj
+                 {:git/tag "v0.8.0" :git/sha "9bd8b8a"}}
+          :ns-default build}
+
+  ;; Run all tests
   ;; clj -X:test
   :test {:extra-paths ["src/test/clojure"]
          ;;:extra-deps {io.github.cognitect-labs/test-runner
