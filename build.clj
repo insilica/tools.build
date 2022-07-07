@@ -15,7 +15,9 @@
 
 (defn jar [opts]
   (-> opts
-      (assoc :lib lib :version (get-version opts))
+      (assoc :lib lib
+             :src-dirs ["src/main/clojure" "src/main/resources"]
+             :version (get-version opts))
       bb/clean
       (assoc :src-pom "template/pom.xml")
       bb/jar))
