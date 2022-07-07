@@ -4,7 +4,7 @@
             [org.corfield.build :as bb]))
 
 (def lib 'co.insilica/tools.build)
-(def version "0.8.3")
+(def version "0.8.3.1")
 (defn get-version [opts]
   (str version (when (:snapshot opts) "-SNAPSHOT")))
 
